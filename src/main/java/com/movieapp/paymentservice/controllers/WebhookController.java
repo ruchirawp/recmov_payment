@@ -41,15 +41,14 @@ public class WebhookController {
                 String userEmail = metadataNode.path("email").asText(null);
                 String tier = metadataNode.path("tier").asText(null);
 
-                //ruchira
                 //testing
-                System.out.println("************************************************************************");
-                System.out.println("🔔 Received Webhook!");
-                System.out.println("Payload: " + payload);
-                System.out.println("Event Type: " + event.getType());
-                System.out.println("📩 Parsed metadata -> Email: " + userEmail + ", Tier: " + tier);
+                // System.out.println("************************************************************************");
+                // System.out.println("🔔 Received Webhook!");
+                // System.out.println("Payload: " + payload);
+                // System.out.println("Event Type: " + event.getType());
+                // System.out.println("📩 Parsed metadata -> Email: " + userEmail + ", Tier: " + tier);
     
-                System.out.println("************************************************************************");
+                // System.out.println("************************************************************************");
 
                 if (userEmail != null && tier != null) {
                     mongoService.updateUserTier(userEmail, tier);

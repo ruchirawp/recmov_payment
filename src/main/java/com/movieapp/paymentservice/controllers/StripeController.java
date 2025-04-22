@@ -28,9 +28,9 @@ public class StripeController {
         SessionCreateParams params = SessionCreateParams.builder()
             .setMode(SessionCreateParams.Mode.PAYMENT)
             // .setSuccessUrl("http://recommendmovie.onrender.com/#/payment/success")
-            .setSuccessUrl("http://localhost:3000/#/payment/success")
+            .setSuccessUrl("https://recommendmovie.onrender.com//#/payment/success")
             // .setCancelUrl("http://recommendmovie.onrender.com/#/payment/cancel")
-            .setCancelUrl("http://localhost:3000/#/payment/cancel")
+            .setCancelUrl("https://recommendmovie.onrender.com/#/payment/cancel")
             .addLineItem(
                     SessionCreateParams.LineItem.builder()
                             .setQuantity(1L)
